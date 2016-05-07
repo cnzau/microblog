@@ -1,0 +1,26 @@
+http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+	mkdir microblog
+	cd microblog/
+create a virtual environment in python 3.4 and newer
+	python -m venv flask
+For versions of Python older than 3.4, download and install virtualenv.py
+Then create a virtual environment
+	sudo apt-get install python-virtualenv
+	virtualenv flask
+Install flask and extensions
+	flask/bin/pip install flask
+	flask/bin/pip install flask-login
+	flask/bin/pip install flask-openid
+	flask/bin/pip install flask-mail
+	flask/bin/pip install flask-sqlalchemy
+	flask/bin/pip install sqlalchemy-migrate
+	flask/bin/pip install flask-whooshalchemy
+	flask/bin/pip install flask-wtf
+	flask/bin/pip install flask-babel
+	flask/bin/pip install guess_language
+	flask/bin/pip install flipflop
+	flask/bin/pip install coverage
+To start the app you just run this script. Indicate that this is an executable file before you can run it
+	chmod a+x run.py
+Exec the script
+	./run.py
