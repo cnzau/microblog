@@ -3,5 +3,15 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
+    user = {'nickname': 'Clemmo'} #placeholder user object(fake/mock object)
     #displayed on the client's web browser
-    return "Hello, World!"
+    return '''
+<html>
+  <head>
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Hello, ''' + user['nickname'] + '''</h1>
+  </body>
+</html>
+'''
