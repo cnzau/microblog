@@ -1,5 +1,7 @@
-from flask import render_template
+from flask import render_template, flash, redirect
 from app import app
+#import LoginForm class, instantiate an object from it
+from .forms import LoginForm
 #route decorators create the mappings from URLs / and /index to this function.
 @app.route('/')
 @app.route('/index')
@@ -28,4 +30,11 @@ def index():
     #Jinja2 substitutes {{...}} blocks with the corresponding values provided as template arguments.
     return render_template('index.html',
                            user=user,
-    	                   posts=posts)
+                           posts=posts)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    return render_template('login.html',
+                           title='Sign In',
+                           form=form)
