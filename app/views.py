@@ -9,5 +9,4 @@ def index():
     #render_template invokes the Jinja2 templating engine
     #Jinja2 substitutes {{...}} blocks with the corresponding values provided as template arguments.
     return render_template('index.html',
-                           title='Home',
                            user=user)
