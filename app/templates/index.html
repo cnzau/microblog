@@ -7,6 +7,11 @@
     {% endif %}  
   </head>
   <body>
-    <h1>Hello, {{ user.nickname }}!</h1>
+    <h1>Hi, {{ user.nickname }}!</h1>
+    {% for post in posts %}
+    <div>
+      <p><i>{{ post.author.nickname }} says:</i> {{ post.body }}</p>
+    </div>
+    {% endfor %}
   </body>
 </html>
